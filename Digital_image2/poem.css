@@ -1,0 +1,96 @@
+/* html과 body의 기본 스타일 */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0; /* 불필요한 여백 제거 */
+    font-family: 'Noto Serif KR', sans-serif;
+    font-size: 2vw;
+    line-height: 3;
+    overflow: auto; /* 세로 스크롤만 허용 */
+    overflow-x: hidden; /* 가로 스크롤 방지 */
+    width: 100%; /* 화면 크기를 넘지 않도록 설정 */
+    box-sizing: border-box; /* 패딩과 보더가 요소의 너비에 포함되도록 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffef3;
+    background-image: url('textures/Noise & Texture.svg'); /* textures 폴더 안의 이미지 경로 */
+    background-size: cover; /* 배경 이미지 크기 조정 */
+    background-position: center center; /* 배경 이미지 중앙 정렬 */
+    background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
+    background-attachment: fixed; /* 배경 이미지 고정 */
+}
+
+h1 {
+    font-size: 6vw;
+    color: #2c55ff;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+h2 {
+    font-size: 3vw;
+    margin: 5%;
+    margin-left: -10%;
+    align-self: flex-end;
+    text-align: right;
+    width: 100%;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: normal;
+}
+
+p {
+    margin: 2vw;
+    margin-left: 10%;
+    width: 100%;
+}
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    height: 2vw; /* 텍스트 높이에 맞춤 */
+    line-height: 1.3; /* 라인 높이를 1로 설정 */
+    margin: 0.2vw;
+}
+
+.text {
+    position: relative;
+    opacity: 0; /* 초기 상태에서 숨김 */
+    transition: opacity 0.3s; /* 부드러운 전환 */
+    display: inline-block; /* 텍스트를 블록으로 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    font-weight: 600;
+    color: #2c55ff; /* 텍스트 색상 변경 */
+}
+
+.svg {
+    position: absolute;
+    left: 50%; /* 중앙 정렬 */
+    transform: translate(-50%, 0); /* 중앙 정렬 보정 */
+    top: -0.5vw; /* SVG 위치를 위로 올림 */
+    height: 4vw; /* SVG 크기를 240px로 설정 */
+    width: auto; /* 비율에 맞춰 자동 조정 */
+    opacity: 1; /* 기본 상태에서 보임 */
+    transition: opacity 0.3s; /* 부드러운 전환 */
+}
+
+/* 화면 하단 중앙 버튼 이미지 */
+.button-container {
+    position: fixed; /* 화면에 고정 위치 설정 */
+    bottom: 85%; /* 화면 하단에서 1% 만큼 떨어짐 */
+    left: 50%; /* 수평 중앙으로 설정 */
+    transform: translateX(-50%); /* 이미지가 정확히 중앙에 오도록 좌우로 이동 */
+    z-index: 100; /* 다른 요소보다 위에 표시 */
+}
+
+.button-container img {
+    height: auto; /* 비율에 맞춰 자동으로 높이 설정 */
+    width: 3.5vw; /* 버튼 크기를 화면 너비의 15%로 설정 */
+    transition: transform 0.3s ease; /* 크기 변화 시 애니메이션 추가 */
+}
+
+/* 마우스 오버 시 이미지 크기 커짐 */
+.button-container img:hover {
+    transform: scale(1.2); /* 10% 크기 확대 */
+}

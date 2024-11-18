@@ -1,0 +1,132 @@
+/* html과 body의 기본 스타일 */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', serif;
+    font-size: 2vw; /* 기본 폰트 크기를 viewport width 기준으로 설정 */
+    line-height: 1.6;
+    overflow: auto;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #010101;
+    background-image: url('./textures/Noise\ &\ Texture2.svg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* h1 스타일 */
+h1 {
+    font-size: 4vw; /* h1 텍스트 크기 */
+    font-weight: normal;
+    color: #2c55ff;
+    text-align: left;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 2w;
+}
+
+/* "(燦爛하다/粲爛하다)" 스타일 */
+.highlight {
+    color: #010101;
+    font-size: 1.5vw; /* highlight 텍스트 크기 */
+}
+
+/* h2 스타일 */
+h2 {
+    font-size: 1.5vw; /* h2 텍스트 크기 */
+    margin: 0;
+    margin-left: 0;
+    margin-bottom: 2vw;
+    text-align: left;
+    font-family: 'Noto Sans KR', serif;
+    font-weight: normal;
+}
+
+h3 {
+    margin-bottom: 2vw;
+    font-size: 2vw;
+    font-weight: 400;
+}
+
+/* 중앙에 사각형 배치 */
+.container {
+    width: 70%; /* 컨테이너의 가로 너비 */
+    position: relative; /* 절대 위치로 내부 요소 조정 가능하도록 설정 */
+    margin-top: 3vw;
+    background-color: #fffef3; /* 기본 배경색 */
+    background-image: url('./textures/Noise\ &\ Texture.svg'); /* 질감 이미지 추가 */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 텍스트가 위쪽으로 오도록 설정 */
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 3vw; /* 내부 여백 */
+    box-sizing: border-box; /* padding 포함 */
+    overflow: hidden; /* 텍스트가 컨테이너 밖으로 넘지 않도록 설정 */
+    padding-bottom: calc(3% / 1.142); /* 세로 비율을 유지: 80% width에 대해 약 70% height 유지 */
+}
+
+/* 텍스트 박스 스타일 */
+.text_box {
+    text-align: left; /* 왼쪽 정렬 */
+    color: #010101;
+    max-width: 100%; /* 텍스트 박스가 컨테이너의 100% 크기를 사용 */
+    max-height: 100%; /* 텍스트 박스가 컨테이너의 100% 높이를 사용 */
+    overflow: visible; /* 넘치는 텍스트가 보이도록 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 텍스트가 위쪽에서 시작하도록 설정 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+}
+
+/* 상단 중앙에 로고 배치 */
+.header-logo {
+    margin-top: 0vw;
+    position: absolute;
+    top: 4%; /* 화면의 정확한 세로 중앙 */
+    left: 50%; /* 화면의 정확한 가로 중앙 */
+    transform: translate(-50%, -50%) rotate(45deg); /* 회전 후에도 정확히 중앙을 맞추기 위해 translate와 rotate 결합 */
+    z-index: 1000; /* 다른 요소들보다 위에 표시 */
+    cursor: pointer; /* 클릭할 수 있도록 커서 변경 */
+}
+
+/* 로고 이미지 크기와 애니메이션 추가 */
+.header-logo img {
+    margin-top: 3vh;
+    width: 9.5vh; /* 이미지 크기 설정 */
+    height: auto;
+    transition: transform 0.3s ease; /* 애니메이션 추가 */
+}
+
+/* 마우스 오버 시 로고 이미지 크기 커짐 */
+.header-logo img:hover {
+    transform: scale(1.2); /* 마우스 오버 시 1.1배 커짐 */
+}
+
+/* p 태그 스타일 */
+p {
+    font-size: 1.5vw; /* p 태그의 글자 크기 */
+    margin: 1vw 0; /* 여백을 동적으로 설정 */
+    font-family: 'Noto Sans KR', serif;
+    font-weight: normal;
+    line-height: 3;
+}
+
+/* 번호 부분 스타일 */
+.highlight-number {
+    color: #2c55ff; /* 번호 색상 설정 */
+    font-weight: bold; /* 번호를 볼드 처리 */
+}
